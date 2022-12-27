@@ -1,0 +1,163 @@
+nav {
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+nav .logo {
+    position: fixed;
+    left: 1rem;
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+nav .logo img {
+    width: 3rem;
+    height: 3rem;
+
+}
+
+nav .logo h3 {
+    color: red;
+    font-size: 2rem;
+    text-shadow: .2rem -.1rem .2rem rgba(0, 0, 0, 0.648);
+    ;
+}
+
+nav .logo:hover {
+    transform: rotateX(10deg);
+}
+
+nav .navlinks {
+    height: 4rem;
+    width: fit-content;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.295);
+}
+
+nav .navlinks ul {
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+}
+
+nav .navlinks ul li {
+    list-style: none;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 1rem;
+}
+nav .navlinks ul li img{
+height:1.5rem;
+width:1.5rem;
+margin-right:1rem;
+}
+
+nav .navlinks ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav .navlinks ul li a:focus {
+    color: green;
+    border-bottom: 3px solid rgb(255, 85, 0);
+}
+
+
+#nav-menu{
+    position:absolute;
+    right:2rem  ;
+    width:4rem;
+    height:4rem;
+    display:none;
+}
+@media screen and (max-width:750px) {
+    #nav-menu{
+        display:block;
+    }
+    nav .navlinks {
+        width:0;
+        height:0;
+    }
+
+    nav .navlinks ul {
+        position: absolute;
+        top:6rem;   
+        flex-direction: column;
+        
+        width:100vw;
+        background:black; 
+        overflow: hidden; 
+    }
+    nav .navlinks ul li{
+        width:80%;
+        height:4rem;
+        background:white;
+        margin:1rem 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav .navlinks ul li a{
+    font-size: 1.6rem;
+    }
+
+}
+
+@media screen and (max-width:200px){
+    nav .logo {
+        position: fixed;
+        left: -1.5rem;
+    }
+    nav .logo img {
+        width: 2.8rem;
+        height: 3rem;
+    
+    }
+    
+    nav .logo h3 {
+        color: red;
+        font-size: .8rem;
+        text-shadow: .2rem -.1rem .2rem rgba(0, 0, 0, 0.648);
+        ;
+    }
+    #nav-menu{
+        right:1rem  ;
+        width:3rem;
+        height:3rem;
+    }
+}
+@media screen and (max-width:100px){
+    nav .logo {
+     display:none;
+    }
+    nav .logo img {
+        width: 3rem;
+        height: 3rem;
+    
+    }
+    
+    nav .logo h3 {
+        color: red;
+        font-size: 1rem;
+        text-shadow: .2rem -.1rem .2rem rgba(0, 0, 0, 0.648);
+        ;
+    }
+    #nav-menu{
+        right:1rem  ;
+        width:3rem;
+        height:3rem;
+    }
+}

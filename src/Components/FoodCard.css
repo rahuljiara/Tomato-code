@@ -1,0 +1,129 @@
+.food-container {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+
+}
+
+.food-card {
+    height: 17rem;
+    width: 15rem;
+    margin: 1rem;
+    background-color: white;
+    border-radius: .4rem;
+    box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.297);
+
+}
+
+.food-card .title {
+    height: 2.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1rem;
+    text-transform: capitalize;
+}
+
+.food-card .title .food-type img {
+    width: 2rem;
+    height: 2rem;
+    object-fit: cover;
+}
+
+.price {
+    height: 3.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.price button {
+    width: 8rem;
+    height: 2.5rem;
+    border: 0;
+    outline: none;
+    color: white;
+    background: rgb(0, 42, 59);
+    border-radius: 5rem;
+    cursor: pointer;
+}
+
+img {
+    HEIGHT: 10.6rem;
+    width: 100%;
+}
+
+@media screen and (max-width:900px) {
+    .food-container {
+        grid-template-columns: repeat(4, auto);
+    }
+}
+
+@media screen and (max-width:700px) {
+    .food-container {
+        grid-template-columns: repeat(3, auto);
+    }
+}
+
+@media screen and (max-width:525px) {
+    .food-container {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .food-card {
+        margin: 1rem .5rem;
+    }
+}
+
+@media screen and (max-width:325px) {
+    .food-container {
+        grid-template-columns: repeat(1, auto);
+    }
+
+    .food-card {
+        height: 19rem;
+        width: calc(100% - 1rem);
+        margin: 1rem .5rem;
+    }
+
+    img {
+        HEIGHT: 11.6rem;
+    }
+
+    .food-card .title {
+        height: 3.8rem;
+    }
+}
+
+@media screen and (max-width:180px) {
+    .food-container {
+        grid-template-columns: repeat(1, auto);
+    }
+
+    .food-card {
+        zoom: .7 ;
+    }
+
+    img {
+        HEIGHT: 11.6rem;
+    }
+
+    .food-card .title {
+        height: 3.8rem;
+    }
+    .price button {
+        width: 6rem;
+        font-size: 1rem;
+    }
+
+}
+@media screen and (max-width:100px) {
+    .food-card {
+        zoom: .4 ;
+    }
+}
